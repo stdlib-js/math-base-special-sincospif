@@ -35,6 +35,22 @@ limitations under the License.
 
 > Simultaneously compute the [sine][@stdlib/math/base/special/sinf] and [cosine][@stdlib/math/base/special/cosf] of a single-precision floating-point number times [π][@stdlib/constants/float32/pi].
 
+<section class="intro">
+
+The function simultaneously computes the [sine][sine] and [cosine][cosine] of a number scaled by `π`
+
+<!-- <equation class="equation" label="eq:sincospi_function" align="center" raw="(y_s, y_c) = (\sin(\pi x),\; \cos(\pi x))" alt="Sine and cosine of pi times x"> -->
+
+```math
+(y_s, y_c) = (\sin(\pi x),\; \cos(\pi x))
+```
+
+<!-- </equation> -->
+
+</section>
+
+<!-- /.intro -->
+
 <section class="installation">
 
 ## Installation
@@ -295,6 +311,10 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/math-base-special-sincospif/tree/esm
 [esm-readme]: https://github.com/stdlib-js/math-base-special-sincospif/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/math-base-special-sincospif/blob/main/branches.md
+
+[cosine]: https://en.wikipedia.org/wiki/Cosine
+
+[sine]: https://en.wikipedia.org/wiki/Sine
 
 [@stdlib/math/base/special/sinf]: https://github.com/stdlib-js/math-base-special-sinf
 
