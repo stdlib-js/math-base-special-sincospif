@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-11-21)
+## Unreleased (2026-11-25)
 
 <section class="features">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`f82b54b`](https://github.com/stdlib-js/stdlib/commit/f82b54b5e08de9cea9aaf6e6d179960bc583f3e9) - **docs:** update Markdown equation elements _(by stdlib-bot)_
+-   [`3a627f0`](https://github.com/stdlib-js/stdlib/commit/3a627f07dba028f23fceabc48cbdda8cc1beca69) - **docs:** update Markdown equation SVGs _(by stdlib-bot)_
 -   [`4f37391`](https://github.com/stdlib-js/stdlib/commit/4f37391df8570463bc64e4507b9998fda5f7c256) - **docs:** update use of format specifiers in examples [(#16734)](https://github.com/stdlib-js/stdlib/pull/16734) _(by Philipp Burckhardt)_
 -   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`2d9f528`](https://github.com/stdlib-js/stdlib/commit/2d9f52814b7ed08bda0cbb89cb485e6ed2d78865) - **docs:** add equations [(#14687)](https://github.com/stdlib-js/stdlib/pull/14687) _(by Karan Anand)_
