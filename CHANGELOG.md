@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-11-25)
+## Unreleased (2026-11-27)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`ad3b5f7`](https://github.com/stdlib-js/stdlib/commit/ad3b5f7aede02b68f622d3b1d35c4384189f38ea) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`f82b54b`](https://github.com/stdlib-js/stdlib/commit/f82b54b5e08de9cea9aaf6e6d179960bc583f3e9) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`3a627f0`](https://github.com/stdlib-js/stdlib/commit/3a627f07dba028f23fceabc48cbdda8cc1beca69) - **docs:** update Markdown equation SVGs _(by stdlib-bot)_
 -   [`4f37391`](https://github.com/stdlib-js/stdlib/commit/4f37391df8570463bc64e4507b9998fda5f7c256) - **docs:** update use of format specifiers in examples [(#16734)](https://github.com/stdlib-js/stdlib/pull/16734) _(by Philipp Burckhardt)_
