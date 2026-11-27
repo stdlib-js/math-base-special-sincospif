@@ -46,7 +46,7 @@ The function simultaneously computes the [sine][sine] and [cosine][cosine] of a 
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="(y_s, y_c) = (\sin(\pi x),\; \cos(\pi x))" data-equation="eq:sincospi_function">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@1ad0391490d48cc006d6222c553ba6df0b61326c/lib/node_modules/@stdlib/math/base/special/sincospif/docs/img/equation_sincospi_function.svg" alt="Sine and cosine of pi times x">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@3a627f07dba028f23fceabc48cbdda8cc1beca69/lib/node_modules/@stdlib/math/base/special/sincospif/docs/img/equation_sincospi_function.svg" alt="Sine and cosine of pi times x">
     <br>
 </div> -->
 
@@ -56,20 +56,32 @@ The function simultaneously computes the [sine][sine] and [cosine][cosine] of a 
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-sincospif
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sincospif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospif@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospif@esm/index.mjs';
+var sincospif = require( '@stdlib/math-base-special-sincospif' );
 ```
 
 #### sincospif( x )
@@ -95,7 +107,7 @@ v = sincospif( NaN );
 Simultaneously computes the [sine][@stdlib/math/base/special/sinf] and [cosine][@stdlib/math/base/special/cosf] of a single-precision floating-point number times [π][@stdlib/constants/float32/pi] and assigns the results to a provided output array.
 
 ```javascript
-import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
+var Float32Array = require( '@stdlib/array-float32' );
 
 var out = new Float32Array( 2 );
 
@@ -126,25 +138,16 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import sincospif from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospif@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var sincospif = require( '@stdlib/math-base-special-sincospif' );
 
 var opts = {
     'dtype': 'float32'
 };
 var x = uniform( 100, -100.0, 100.0, opts );
 logEachMap( 'sincospif(%0.4f) = [%s]', x, sincospif );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -153,7 +156,93 @@ logEachMap( 'sincospif(%0.4f) = [%s]', x, sincospif );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/sincospif.h"
+```
+
+#### stdlib_base_sincospif( x, &sine, &cosine )
+
+Simultaneously computes the [sine][@stdlib/math/base/special/sinf] and [cosine][@stdlib/math/base/special/cosf] of a single-precision floating-point number times [π][@stdlib/constants/float32/pi].
+
+```c
+float cosine;
+float sine;
+
+stdlib_base_sincospif( 4.0f, &sine, &cosine );
+```
+
+The function accepts the following arguments:
+
+-   **x**:      `[in] float` input value.
+-   **sine**:   `[out] float*` destination for the sine.
+-   **cosine**: `[out] float*` destination for the cosine.
+
+```c
+void stdlib_base_sincospif( const float x, float *sine, float *cosine );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/sincospif.h"
+#include <stdio.h>
+
+int main( void ) {
+    const float x[] = { 0.0f, 0.5f, 1.0f, 2.0f };
+
+    float cosine;
+    float sine;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        stdlib_base_sincospif( x[ i ], &sine, &cosine );
+        printf( "x: %f => sine: %f, cosine: %f\n", x[ i ], sine, cosine );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -172,7 +261,7 @@ logEachMap( 'sincospif(%0.4f) = [%s]', x, sincospif );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -232,11 +321,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [sine]: https://en.wikipedia.org/wiki/Sine
 
-[@stdlib/math/base/special/sinf]: https://github.com/stdlib-js/math-base-special-sinf/tree/esm
+[@stdlib/math/base/special/sinf]: https://github.com/stdlib-js/math-base-special-sinf
 
-[@stdlib/math/base/special/cosf]: https://github.com/stdlib-js/math-base-special-cosf/tree/esm
+[@stdlib/math/base/special/cosf]: https://github.com/stdlib-js/math-base-special-cosf
 
-[@stdlib/constants/float32/pi]: https://github.com/stdlib-js/constants-float32-pi/tree/esm
+[@stdlib/constants/float32/pi]: https://github.com/stdlib-js/constants-float32-pi
 
 <!-- <related-links> -->
 
